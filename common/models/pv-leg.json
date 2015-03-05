@@ -4,21 +4,20 @@
   "strict": false,
   "idInjection": false,
   "properties": {
+    "circonscriptionId": {
+      "type": "number"
+    },
     "delegationId": {
-      "type": "number",
-      "required": true
+      "type": "number"
     },
     "subDelegationId": {
-      "type": "number",
-      "required": true
+      "type": "number"
     },
     "centerID": {
-      "type": "number",
-      "required": true
+      "type": "number"
     },
     "stationId": {
-      "type": "number",
-      "required": true
+      "type": "number"
     },
     "PollingCenterName": {
       "type": "string"
@@ -28,10 +27,6 @@
     },
     "aSigningVoters": {
       "type": "number"
-    },
-    "circonscriptionId": {
-      "type": "number",
-      "required": true
     },
     "bDeliveredBallots": {
       "type": "number"
@@ -59,6 +54,42 @@
   },
   "validations": [],
   "relations": {},
-  "acls": [],
+  "acls": [
+
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY",
+      "property": "create"
+    },
+
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY",
+      "property": "destroyById"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY",
+      "property": "upsert"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    }
+  ],
   "methods": []
 }
