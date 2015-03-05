@@ -1,0 +1,64 @@
+{
+  "name": "pvLeg",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "properties": {
+    "delegationId": {
+      "type": "number",
+      "required": true
+    },
+    "subDelegationId": {
+      "type": "number",
+      "required": true
+    },
+    "centerID": {
+      "type": "number",
+      "required": true
+    },
+    "stationId": {
+      "type": "number",
+      "required": true
+    },
+    "PollingCenterName": {
+      "type": "string"
+    },
+    "registeredVoters": {
+      "type": "number"
+    },
+    "aSigningVoters": {
+      "type": "number"
+    },
+    "circonscriptionId": {
+      "type": "number",
+      "required": true
+    },
+    "bDeliveredBallots": {
+      "type": "number"
+    },
+    "cSpoiledBallots": {
+      "type": "number"
+    },
+    "dLeftBallots": {
+      "type": "number"
+    },
+    "fExtractedBallots": {
+      "type": "number"
+    },
+    "kCancelledVotes": {
+      "type": "number"
+    },
+    "lBlankVotes": {
+      "type": "number"
+    },
+    "listVotes": {
+      "type": [
+        "listVote"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
