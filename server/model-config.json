@@ -26,11 +26,15 @@
     "dataSource": "db",
     "public": false
   },
-  "pvLeg": {
+  "listVote": {
     "dataSource": "pvDatasource",
     "public": true
   },
-  "listVote": {
+  "legislatives": {
+    "dataSource": "pvDatasource",
+    "public": true
+  },
+  "presidentielles": {
     "dataSource": "pvDatasource",
     "public": true
   }
