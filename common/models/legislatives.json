@@ -37,11 +37,6 @@
     "lBlankVotes": {
       "type": "number"
     },
-    "listVotes": {
-      "type": [
-        "listVote"
-      ]
-    },
     "registeredVoters": {
       "type": "number"
     },
@@ -53,7 +48,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "lists":{
+      "type": "hasMany",
+      "model": "listVote",
+      "foreignKey": "pvId"
+    }
+  },
   "acls": [
     {
       "accessType": "*",
